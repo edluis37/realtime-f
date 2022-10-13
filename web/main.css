@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html,
+body {
+  background-image: url("https://images.unsplash.com/photo-1513171920216-2640b288471b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80");
+  background-repeat: no-repeat;
+  background: rgb(41, 41, 41);
+  font-family: 'Poppins', sans-serif;
+}
+
+.header{
+background-color: #0044ff;
+padding: 20px;
+color: white;
+
+
+}
+#logo_text{
+text-align: right;
+font-size: 20px;
+margin-top: 0px;
+padding: 0px;
+float: right;
+
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.post-wrapper {
+  width: 1215px;
+  height: 500px;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.post-container {
+  width: 900px;
+  height: 500px;
+  background-color: rgb(60, 60, 60);
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+
+  float: left;
+}
+
+.post-container h1 {
+  text-align: center;
+}
+
+.post-container .additional {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(#222ac3, #0044ff);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.additional:hover {
+  width: 30%;
+  border-radius: 0 5px 5px 0;
+}
+
+.post-container .additional .author-card {
+  width: 300px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.post-container .additional .author-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -20px;
+  height: 80%;
+  border-left: 2px solid rgba(0, 0, 0, 0.025);
+}
+
+.post-container .additional .author-card .author-nickname,
+.post-container .additional .author-card .author-age {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.post-container .additional .author-card .author-age {
+  top: 85%;
+}
+
+.card .additional .user-card svg {
+  top: 50%;
+}
+
+.post-container .additional .detailed-info {
+  width: 600px;
+  float: left;
+  position: absolute;
+  left: 300px;
+  height: 100%;
+}
+
+.post-container .additional .detailed-info h1 {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.post-container .additional .info {
+  margin: 0 1rem;
+  color: rgb(10, 6, 6);
+  font-size: 1rem;
+}
+
+.post-container .additional .info span + span {
+  float: right;
+}
+
+.post-container .post-content {
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.post-container .post-content .comment-count {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+
+.comment-count:hover {
+  background-color: #4e78e4;
+  cursor: pointer;
+}
+
+.new-comment-wrapper {
+  width: 80%;
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 0.1rem;
+  right: 6rem;
+}
+
+.new-comment-input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(97, 97, 97);
+  box-sizing: border-box;
+
+  /* float: left; */
+
+}
+.new-comment-button {
+  padding: 13px;
+  width: 15%;
+  /* float: right; */
+}
+
+.post-wrapper .comment-section {
+  background-color: rgb(235, 235, 235);
+  float: right;
+  border-radius: 6px;
+  padding-left: 0.5rem;
+  width: 300px;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.user-comment {
+  list-style-type: none;
+}
+
+.comment-wrapper {
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: 2px solid rgb(158, 158, 158);
+}
+
+.comment-body {
+  display: inline-block;
+  vertical-align: left;
+  width: 95%;
+  min-height: 65px;
+
+  font-size: 0.9rem;
+  color: rgb(54, 54, 54);
+  background-color: rgb(245, 245, 245);
+}
+.comment-wrapper .comment-nickname {
+  margin-top: 2px;
+  padding: 1px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #6134f3;
+}
+.comment-body p {
+  margin-top: 2px;
+  padding: 1px;
+}
+
+#posts-container {
+  height: 100vh;
+  overflow-y: scroll;
+  float: left;
+}
+#posts-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+#sidebar {
+  float: left;
+  width: 225px;
+}
+#sign-buttons {
+  margin-bottom: 0.4rem;
+  clear: both;
+}
+
+#sign-buttons .visitor-button {
+  border-radius: 3px;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+#sign-buttons button {
+  background-color: rgb(102, 102, 102);
+}
+
+#sign-buttons button:hover {
+  background-color: rgb(148, 148, 148);
+  cursor: pointer;
+}
+
+#post-filter {
+  margin-bottom: 1rem;
+  clear: both;
+}
+
+#post-filter .post-category {
+  border-radius: 3px;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+#post-filter button {
+  background-color: rgb(102, 102, 102);
+}
+
+#post-filter button:hover {
+  background-color: rgb(148, 148, 148);
+  cursor: pointer;
+}
+
+#user-info {
+  width: 100%;
+  border-radius: 1px;
+  border-color: rgb(0, 0, 0);
+}
+
+#user-info div {
+  padding: 0.2rem;
+  font-size: 10px;
+}
+
+.chat {
+  height: 76.5vh;
+  overflow-y: scroll;
+}
+.chat::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.chat .chat-users p {
+  margin-bottom: 3px;
+}
+
+.chat-user:hover {
+  background-color: rgb(232, 232, 232);
+  cursor: pointer;
+}
+
+/* Full-width input fields */
+.modal input[type="text"],
+.modal input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(57, 57, 57);
+  box-sizing: border-box;
+}
+
+.modal textarea[type="text"]{
+  width: 100%;
+  height: 15em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(119, 119, 119);
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #41407e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+/* The Close Button (x) */
+.close {
+  position: relative;
+  float: right;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.container {
+  padding: 20px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #484c60;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  border-radius: 15px;
+}
+
+.close:hover,
+.close:focus {
+  color: #a2ccb6;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.room {
+  height: 60vh;
+  background-color: rgb(150, 150, 150);
+  float: left;
+  padding: 30px 25px 30px 25px;
+  width: 60%;
+}
+
+.msg-history {
+  height: 95%;
+  overflow-y: auto;
+}
+
+.msg-history::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+.type-msg {
+  border-top: 1px solid #c4c4c4;
+  position: relative;
+}
+
+.input-msg-write input {
+  margin: 0px;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  color: #4c4c4c;
+  font-size: 15px;
+  min-height: 48px;
+  width: 95%;
+}
+
+.msg-send-btn {
+  border: medium none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  top: 11px;
+  width: 33px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.incoming_msg_img {
+  display: inline-block;
+  width: 6%;
+}
+.received_msg {
+  display: inline-block;
+  vertical-align: top;
+  width: 92%;
+}
+.received_withd_msg p {
+  background: #a5a5a5 none repeat scroll 0 0;
+  border-radius: 3px;
+  color: #646464;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.time_date {
+  color: #747474;
+  display: block;
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+.received_withd_msg {
+  width: 57%;
+}
+.sent_msg p {
+  background: #3f9c6c none repeat scroll 0 0;
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.outgoing_msg {
+  overflow-wrap: break-word;
+  margin: 26px 0 26px;
+}
+.sent_msg {
+  width: 46%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.new-message {
+  background-color: rgb(22, 189, 155);
+}

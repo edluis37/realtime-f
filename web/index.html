@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>RTF - LUIS TEAM</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class = "header">
+      <img src="1logo.svg" width="100" alt="" /> <span id ="logo_text"><strong><i>RTF - 01FORUM</i></strong> <div id="user-info"></div><div id="sign-buttons"></div> </span>
+    </div>
+    <div style ="background-color: rgb(26, 26, 52);">.</div>
+    <div id="sidebar">
+      <div id="post-filter">
+
+      </div>
+      <div class="chat">
+        <!-- <p style="font-size: 21px; margin-bottom: 5px">online</p> -->
+        <div class="chat-users" id="online-users"></div>
+        <!-- <p style="font-size: 21px; margin-bottom: 5px">offline</p> -->
+        <div class="chat-users" id="offline-users"></div>
+      </div>
+    </div>
+    <div id="wall">
+      <div id="posts-container"></div>
+      <div id="room-container"></div>
+    </div>
+    <div id="login-modal" class="modal">
+      <div class="modal-content animate">
+        <div class="imgcontainer">
+          <span class="close">&times;</span>
+        </div>
+        <div class="container">
+          <input
+            name="username"
+            type="text"
+            placeholder="Username or Email"
+            required
+          />
+          <input
+            name="password"
+            type="password"
+            placeholder="Enter Password"
+            required
+          />
+          <button>Login</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+      <div class="modal-content animate">
+        <div class="imgcontainer">
+          <span class="close">&times;</span>
+        </div>
+        <div class="container">
+          <input
+            name="username"
+            type="text"
+            placeholder="Username"
+            required
+          />
+          <input name="email" type="text" placeholder="Enter email" required />
+          <input
+            name="first-name"
+            type="text"
+            placeholder="First name"
+            required
+          />
+          <input
+            name="last-name"
+            type="text"
+            placeholder="Last name"
+            required
+          />
+          <input
+            name="age"
+            type="number"
+            placeholder="Enter your age"
+            required
+          />
+          <select name="gender">
+            <option value="male">MALE</option>
+            <option value="female">FEMALE</option>
+          </select>
+          <input
+            name="password"
+            type="password"
+            placeholder="Enter password"
+            required
+          />
+          <input
+            name="repeat-password"
+            type="password"
+            placeholder="Repeat password"
+            required
+          />
+          <button>Sign In</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="create-post-modal" class="modal">
+      <div class="modal-content animate">
+        <div class="imgcontainer">
+          <span class="close">&times;</span>
+        </div>
+        <div class="container">
+          <input
+            name="title"
+            type="text"
+            placeholder="Enter title of post"
+            required
+          />
+          <select name="post-category" required>
+            <option value="NEWS">NEWS</option>
+            <option value="FASHION">FASHION</option>
+            <option value="THEATER">THEATER</option>
+            <option value="SPORT">SPORT</option>
+            <option value="ALL">ALL...</option>
+        
+          </select>
+          <br>
+          <br>
+          <textarea
+            name="post-text"
+            type="text"
+            placeholder="#Community - Start posting now!"
+            required
+          ></textarea>
+          <button>Create post</button>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
