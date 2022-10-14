@@ -53,15 +53,16 @@ export default class RoomView {
     createSendMsgButton = (handler) => {
         const button = createElement("button", "msg-send-btn")
         button.setAttribute("type", "button")
+        // document.getElementById("send msg icon").src = "web/room.gif";
         button.addEventListener("click", () => {
             if (this.input.value !== "") {
                 handler(this.input.value)
                 this.input.value = ""
             }
         })
-        const image = createElement("i", "fa", "fa-paper-plane-o")
-        image.setAttribute("aria-hidden", "true")
-        button.append(image)
+        // const image = createElement("i", "fa", "fa-paper-plane-o")
+        // image.setAttribute("aria-hidden", "true")
+        // button.append(image)
         return button
     }
 

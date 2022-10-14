@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body {
+  -moz-transform: scale(2.5); /* for Firefox, default 1*/
+  zoom:130%; /* For Chrome, IE, default 100%*/
+}
+
 html,
 body {
   background-image: url("https://images.unsplash.com/photo-1513171920216-2640b288471b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80");
   background-repeat: no-repeat;
-  background: rgb(41, 41, 41);
+  background: #1e0c23;
   font-family: 'Poppins', sans-serif;
 }
 
 .header{
 background-color: #0044ff;
 padding: 20px;
-color: white;
+color: 1e0c23;
 
 
 }
@@ -21,6 +26,7 @@ font-size: 20px;
 margin-top: 0px;
 padding: 0px;
 float: right;
+color: white;
 
 }
 .center {
@@ -31,15 +37,16 @@ float: right;
 }
 
 .post-wrapper {
-  width: 1215px;
-  height: 500px;
+  width: 1340px;
+  height: 400px;
   position: relative;
+  justify-content: center;
   margin: 1.5rem;
 }
 
 .post-container {
-  width: 900px;
-  height: 500px;
+  width: 1010px;
+  height: 400px;
   background-color: rgb(60, 60, 60);
   background: linear-gradient(#f8f8f8, #fff);
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
@@ -54,11 +61,21 @@ float: right;
   text-align: center;
 }
 
+.author-policy {
+font-size: medium;
+color: white;
+padding-bottom: 8rem;
+}
+
+.textSize {
+  font-size: medium;
+}
+
 .post-container .additional {
   position: absolute;
   width: 300px;
   height: 100%;
-  background: linear-gradient(#222ac3, #0044ff);
+  background:(#0044ff);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
@@ -74,6 +91,8 @@ float: right;
   height: 100%;
   position: relative;
   float: left;
+  background-color: #00c566;
+  outline: white;
 }
 
 .post-container .additional .author-card::after {
@@ -93,7 +112,7 @@ float: right;
   text-transform: uppercase;
   font-size: 0.75em;
   font-weight: bold;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(172, 0, 0, 0.15);
   padding: 0.125rem 0.75rem;
   border-radius: 100px;
   white-space: nowrap;
@@ -131,7 +150,7 @@ float: right;
 }
 
 .post-container .post-content {
-  width: 600px;
+  width: 765px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -144,30 +163,35 @@ float: right;
 
 .post-container .post-content .comment-count {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 30px;
+  right: 4rem;
   font-size: 0.9em;
 }
 
+
+
 .comment-count:hover {
-  background-color: #4e78e4;
+  background-color:#1e0c23;
   cursor: pointer;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  font-size: medium;
 }
 
 .new-comment-wrapper {
   width: 80%;
   font-size: 0.9em;
   position: absolute;
-  bottom: 0.1rem;
-  right: 6rem;
+  bottom: 1rem;
+  right: 4rem;
 }
 
 .new-comment-input {
-  width: 80%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid rgb(97, 97, 97);
+  border: 1px solid rgb(0, 0, 0);
   box-sizing: border-box;
 
   /* float: left; */
@@ -179,13 +203,26 @@ float: right;
   /* float: right; */
 }
 
+.post-title {
+  justify-content: left;
+}
+
+
+.post-text-span {
+  justify-content: right;
+}
+
+.post-text {
+ margin-left: 4rem;
+}
+
 .post-wrapper .comment-section {
   background-color: rgb(235, 235, 235);
   float: right;
   border-radius: 6px;
   padding-left: 0.5rem;
   width: 300px;
-  height: 500px;
+  height: 400px;
   overflow-y: scroll;
 }
 
@@ -223,7 +260,7 @@ float: right;
 
 #posts-container {
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y:visible;
   float: left;
 }
 #posts-container::-webkit-scrollbar {
@@ -258,12 +295,19 @@ float: right;
 #post-filter {
   margin-bottom: 1rem;
   clear: both;
+  color: #000;
+}
+
+.MainTitle {
+  font-size: xx-large;
 }
 
 #post-filter .post-category {
   border-radius: 3px;
   padding: 0.2rem;
   margin: 0.5rem;
+  background-color: #00c566;
+  color: black;
 }
 
 #post-filter button {
@@ -299,8 +343,16 @@ float: right;
   margin-bottom: 3px;
 }
 
+.log-out-button {
+  background-color: white;
+}
+
+.chat-user{
+  background-color: white;
+}
+
 .chat-user:hover {
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(156, 156, 156);
   cursor: pointer;
 }
 
@@ -328,7 +380,7 @@ float: right;
 
 /* Set a style for all buttons */
 button {
-  background-color: #41407e;
+  background-color: #000000;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -360,6 +412,8 @@ button:hover {
 
 .container {
   padding: 20px;
+  background-color: #00c566;
+  outline: white;
 }
 
 span.psw {
@@ -423,10 +477,11 @@ span.psw {
 
 .room {
   height: 60vh;
-  background-color: rgb(150, 150, 150);
-  float: left;
+  background-color: rgb(255, 255, 255);
+  float: right;
   padding: 30px 25px 30px 25px;
   width: 60%;
+  outline:#00c566;
 }
 
 .msg-history {
@@ -447,7 +502,7 @@ span.psw {
   margin: 0px;
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: medium none;
-  color: #4c4c4c;
+  color:#000;
   font-size: 15px;
   min-height: 48px;
   width: 95%;
@@ -456,7 +511,7 @@ span.psw {
 .msg-send-btn {
   border: medium none;
   border-radius: 50%;
-  color: #fff;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 17px;
   height: 33px;
@@ -466,6 +521,13 @@ span.psw {
   width: 33px;
   margin: 0px;
   padding: 0px;
+  /* background: url('web/send-msg-icon.png'); */
+  content: url("/web/send-msg-icon.png");
+  background-size: cover;
+}
+
+.send-icon {
+  background: url('web/send-msg-icon.png');
 }
 
 .incoming_msg_img {
@@ -482,6 +544,7 @@ span.psw {
   border-radius: 3px;
   color: #646464;
   font-size: 14px;
+  justify-content: right;
   margin: 0;
   padding: 5px 10px 5px 12px;
   width: 100%;
@@ -516,9 +579,32 @@ img {
   max-width: 100%;
 }
 
+.online-users{
+  justify-content: center;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
 .header {
   font-size: 21px;
   margin-bottom: 5px;
+  background-color: #00c566;
+  padding-left: 20px;
+
 }
 
 .new-message {
