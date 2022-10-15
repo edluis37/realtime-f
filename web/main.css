@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
 body {
   -moz-transform: scale(2.5); /* for Firefox, default 1*/
   zoom:130%; /* For Chrome, IE, default 100%*/
@@ -17,13 +23,21 @@ body {
 background-color: #0044ff;
 padding: 20px;
 color: 1e0c23;
+}
 
-
+.MainHeader {
+  /* font-size: 21px; */
+  margin-left: 45rem;
+  margin-top: 2rem;
+  /* margin-bottom: 32px; */
+  padding-left: 20px;
+  border-radius: 10px;
 }
 #logo_text{
 text-align: right;
 font-size: 20px;
 margin-top: 0px;
+margin-right: 1rem;
 padding: 0px;
 float: right;
 color: white;
@@ -258,10 +272,27 @@ padding-bottom: 8rem;
   padding: 1px;
 }
 
+.icon {
+	place-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+.titleforum{
+  color: white;
+  font-family: 'Squada One', cursive;
+  font-size: 100px;
+  display: grid;
+	place-items: center;
+  margin-top: auto;
+  margin-left: 12rem;
+}
+
 #posts-container {
   height: 100vh;
   overflow-y:visible;
   float: left;
+  margin-top: -4.15rem;
 }
 #posts-container::-webkit-scrollbar {
   width: 0px;
@@ -271,6 +302,7 @@ padding-bottom: 8rem;
 #sidebar {
   float: left;
   width: 225px;
+  margin-top: -4rem;
 }
 #sign-buttons {
   margin-bottom: 0.4rem;
@@ -307,7 +339,7 @@ padding-bottom: 8rem;
   padding: 0.2rem;
   margin: 0.5rem;
   background-color: #00c566;
-  color: black;
+  color: white;
 }
 
 #post-filter button {
@@ -341,6 +373,8 @@ padding-bottom: 8rem;
 
 .chat .chat-users p {
   margin-bottom: 3px;
+  margin-left: auto;
+  color: white;
 }
 
 .log-out-button {
@@ -477,16 +511,23 @@ span.psw {
 
 .room {
   height: 60vh;
-  background-color: rgb(255, 255, 255);
-  float: right;
+  /* background-color: rgb(255, 255, 255);
+  float: right; */
   padding: 30px 25px 30px 25px;
   width: 60%;
   outline:#00c566;
+  padding-left: 24rem;
+  /* background-color:#00c566; */
+}
+
+#bgstrip{
+  background-color: #03914c;
 }
 
 .msg-history {
-  height: 95%;
+  height: 50%;
   overflow-y: auto;
+  background-color: white;
 }
 
 .msg-history::-webkit-scrollbar {
@@ -500,12 +541,12 @@ span.psw {
 
 .input-msg-write input {
   margin: 0px;
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  background: white none repeat scroll 0 0;
   border: medium none;
-  color:#000;
+  color: #000;
   font-size: 15px;
   min-height: 48px;
-  width: 95%;
+  width: 97.3%;
 }
 
 .msg-send-btn {
@@ -516,8 +557,8 @@ span.psw {
   font-size: 17px;
   height: 33px;
   position: absolute;
-  right: 0;
-  top: 11px;
+  right: 30px;
+  top: 8px;
   width: 33px;
   margin: 0px;
   padding: 0px;
@@ -604,7 +645,8 @@ img {
   margin-bottom: 5px;
   background-color: #00c566;
   padding-left: 20px;
-
+  border-radius: 10px;
+  margin-left: 1.5rem;
 }
 
 .new-message {

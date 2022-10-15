@@ -9,20 +9,22 @@
     />
     <title id="MainTitle">Real Time Forum</title>
     <link rel='shortcut icon' type='image/x-icon' href= '/favicon.ico' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css" />
   </head>
   
   <body>
-    <div class = "header">
-      <img src="1logo.svg" width="100" alt="" /> <span id ="logo_text"><strong><i>Account:</i></strong> <div id="user-info"></div><div id="sign-buttons"></div> </span>
-    </div>
-    
-    <div style ="background-color: 1e0c23;">.</div>
-    
-    <div id="sidebar">
-      <div id="post-filter">
+    <div id="bgstrip">
 
-      </div>
+      <div class = "MainHeader">
+        <img class = "icon" src="1logo.svg" width="100" alt="" /> <span id ="logo_text"><strong><i>Account:</i></strong> <div id="user-info"></div><div id="sign-buttons"></div> </span>
+      </div>   
+    </div>
+    <h1 class = "titleforum">REAL  TIME  FORUM</h1>
+    <div id="sidebar">
+      <div id="post-filter"></div>
       <div class="chat">
         <div class="chat-users" id="online-users"></div>
         <div class="chat-users" id="offline-users"></div>
@@ -116,15 +118,14 @@
           <input
             name="title"
             type="text"
-            placeholder="Enter title of post"
-            required
+            placeholder="Enter title of post" required
           />
           <select name="post-category" required>
-            <option value="NEWS">NEWS</option>
-            <option value="FASHION">FASHION</option>
-            <option value="THEATER">THEATER</option>
-            <option value="SPORT">SPORT</option>
-            <option value="ALL">ALL...</option>
+            <option value="News📖">News📖</option>
+            <option value="Fashion👗">Fashion👗</option>
+            <option value="Theater🎭">Theater🎭</option>
+            <option value="Sport⚽️">Sport⚽️</option>
+            <option value="All🌎">All🌎</option>
         
           </select>
           <br>
