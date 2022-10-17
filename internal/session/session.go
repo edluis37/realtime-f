@@ -5,8 +5,7 @@ import (
 	"errors"
 	"sync"
 	"time"
-
-	"github.com/lithammer/shortuuid"
+	"github.com/edluis37/shortuuid"
 )
 
 //Cookie ...

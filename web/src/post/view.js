@@ -69,9 +69,16 @@ export default class PostView {
         nickname.textContent = `User: ${author.nickname}`
         const age = createElement("div", "author-age", "center")
         age.textContent = `Gender: ${author.gender}`
+
         const postby = createElement("div", "author-policy", "center")
         postby.innerHTML = `<h1> ${author.nickname} </h1>`
         authorCard.append( age, postby, emailSpan)
+=======
+        const policy = createElement("div", "author-policy", "center")
+        policy.innerHTML = `<h1>COMMUNITY<BR/>LIFE<BR/>RESPECT</h1>${author.category}`
+        
+        authorCard.append(nickname, age, policy, emailSpan)
+
         return authorCard
     }
 
