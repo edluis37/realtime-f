@@ -85,10 +85,6 @@ export default class UserView {
             handler(creds)
         })
     }
-
-
-
-
     showSignUpModal = () => {
         const modal = document.getElementById("signup-modal")
         modal.style.display = "block"
@@ -103,7 +99,7 @@ export default class UserView {
             let password = modal.querySelector('input[name="password"]').value
             let rPassword = modal.querySelector('input[name="repeat-password"]').value
             if (password !== rPassword) {
-                displayModal("Repeated password is not equal to original password!!!")
+                displayModal("Passwords do not match")
                 return
             }
             let info = {
@@ -159,7 +155,7 @@ export default class UserView {
         this.signButtons.innerHTML = ""
         const button = createElement("button", "visitor-button")
         button.id = "log-out-button"
-        button.textContent = "Log Out"
+        button.textContent = "Sign Out"
 
         button.addEventListener(("click"), () => {
             logOutHandler()
